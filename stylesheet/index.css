@@ -1,0 +1,63 @@
+
+/*General div contains the grid table and user info*/
+#general{
+    height: 100%;
+    width: auto;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 100%;
+    min-height: 98vh;
+
+}
+
+/*User info*/
+#userInfo{
+    border: 1px solid black;
+}
+
+/*table*/
+#table{
+
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
+    padding: 10vh;
+    
+}
+
+.positions{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+#startLine{
+    background-color: yellow;
+}
+#startLine2{
+    background-color: yellow;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    width: 70%;
+    height: 70%;
+    border-radius: 5px;
+}
+
+.button1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    width: 70%;
+    height: 70%;
+    border-radius: 5px;
+}
+
+
+#hueco{
+    background-color: black;
+}
