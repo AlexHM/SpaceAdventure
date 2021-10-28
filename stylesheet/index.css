@@ -1,4 +1,14 @@
 
+body{
+    background-image: url(/media/imgs/background.jpg);
+    background-repeat: no-repeat;
+    width: 99%;
+    height: auto;
+    background-position: center;
+    background-size: cover;
+}
+
+
 /*General div contains the grid table and user info*/
 #general{
     height: 100%;
@@ -12,8 +22,28 @@
 
 /*User info*/
 #userInfo{
-    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    color: white;
+    height: 100%;
 }
+
+
+
+#dice{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+#btnRoll{
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 /*table*/
 #table{
