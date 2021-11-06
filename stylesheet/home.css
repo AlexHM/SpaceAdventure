@@ -4,8 +4,18 @@ body{
 }
 
 #divSound{
+    background-color: black;
     text-align: right;
-    margin-bottom: 26vh;
+    margin-bottom: 15vh;
+}
+#sound{
+    background-color: black;
+    width: 50%;
+}
+
+#btnSound{
+    background-color: black;
+    border:0;
 }
 #generalHome2{
     display: flex;
@@ -23,27 +33,102 @@ body{
 #homeTitle{
     color: rgb(228, 169, 81);
     font-size: 3vh;
+    padding-left: 30px;
+    padding-right: 30px;
 }
+
+#card {
+    color: white;
+    border-radius: 10px;
+    background-color: black;
+    filter: drop-shadow(0px 0px 25px  rgb(228, 169, 81, .5));
+    border: solid;
+    border-width: 1px;
+    border-color: rgb(228, 169, 81);
+}
+
 
 #userHome{
     flex-direction: row;
+    text-align: center;
+    padding-top: 20px;
 }
+
 #inpUser{
     height: 2vh;
+    background-color: black;
+    color: white;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: rgb(228, 169, 81); 
 }
+
+#inpUser:focus {
+    outline: none;
+    height: 2vh;
+    background-color: black;
+    color: white;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: rgb(228, 169, 81); 
+}
+
 #divBtnStart{
     margin-top: 4vh;
     display: flex;
     justify-content: center;
 }
+
+#btnStart{
+    outline:none;
+    background-color: black;
+    color: white;
+    border: 0;
+}
+
+#btnStart:hover{
+    background-color: rgb(228, 169, 81);
+}
+
 #chooseAvatarHome{
+    padding-top: 20px;
     width: 100%;
     height: auto;
+    text-align: center;
 }
+/*div styles button*/
+.button_slide {
+    
+    color: #FFF;
+    border-radius: 0px;
+    padding: 18px 36px;
+    display: inline-block;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 rgb(228, 169, 81);;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+  }
+  
+  .slide_left:hover {
+    box-shadow: inset 0 0 0 50px rgb(228, 169, 81);;
+    border-radius: 10px;
+  }
+
 .avatars{
     width: 4vh;
     height: auto;
 }
+
 
 
 
