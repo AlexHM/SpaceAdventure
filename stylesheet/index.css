@@ -27,8 +27,9 @@ body{
     justify-content: space-around;
     align-items: center;
     background-color: black;
-    color: white;
+    color: #E4A951;
     height: 100%;
+    font-family: 'Audiowide', cursive;
 }
 
 

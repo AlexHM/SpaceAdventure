@@ -37,3 +37,47 @@ function roll() {
     console.log(valorDado)
 
 }
+
+let user= "Anonymous";
+function setUser() {
+    
+    user = document.getElementById("inpUser").value;
+    console.log(user);
+    window.location= `http://127.0.0.1:5500/htmls/home.html?${user}`;
+    
+
+
+}
+
+
+/*Script Home*/ 
+var isOn = true;
+    var sonido = new Audio()
+    sonido.src = '/media/audio/sound.mp3';
+
+// function sounds() {
+//    sonido.volume = 0.3;
+//    sonido.play();
+//    console.log("dgfdg");
+// }
+
+
+
+function changeButton() {
+    var img = document.getElementById("sound");
+
+    
+    if (isOn) {
+        console.log("Hola desde mute")
+        img.setAttribute("src", "/media/imgs/sound.png");
+        sonido.volume = 0;
+        isOn = false;
+    } else {
+        console.log("Hola desde sonido")
+        img.setAttribute("src", "/media/imgs/soundMute.png");
+        sonido.volume = 0.3;
+        isOn = true;
+    }
+
+
+}
