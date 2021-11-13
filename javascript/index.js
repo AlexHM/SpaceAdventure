@@ -1,4 +1,5 @@
 var valorDado;
+miStorage = localStorage;
 
 function roll() {
     var body = document.querySelector("body");
@@ -38,14 +39,12 @@ function roll() {
 
 }
 
-let user= "Anonymous";
-function setUser() {
+var user= "Anonymous";
+function setUser() {  
+    let username = document.getElementById("inpUser").value;
+    localStorage.setItem("user",username)
+    user = localStorage.getItem("user")
     
-    user = document.getElementById("inpUser").value;
-    console.log(user);
-    window.location= `http://127.0.0.1:5500/htmls/home.html?${user}`;
-    
-
 
 }
 
@@ -61,9 +60,8 @@ var isOn = true;
 //    console.log("dgfdg");
 // }
 
-
-
 function changeButton() {
+    
     var img = document.getElementById("sound");
 
     
@@ -78,6 +76,13 @@ function changeButton() {
         sonido.volume = 0.3;
         isOn = true;
     }
+}
 
 
+function printUsername(){
+
+    let userP = document.getElementById("nameChoosed");
+    let text = document.createTextNode(localStorage.getItem("user"));
+    userP.appendChild(text);
+    console.log(localStorage.getItem("user"))
 }
