@@ -14,10 +14,11 @@
 
 </head>
 
-<body onload="sounds()">
+<body onload="startGame();">
 
     <div id="divSound">
-        <button id="btnSound" class="btn1" onclick="changeButton()"><img src="/media/imgs/soundMute.png" alt="sound" id="sound"></button>
+        <button id="btnSound" class="btn1" onclick="changeButton()"><img src="/media/imgs/soundMute.png" alt="sound"
+                id="sound"></button>
     </div>
     <div id="generalHome">
         <div id="home">
@@ -26,23 +27,22 @@
                     <div id="homeTitle">
                         <h1 id="spaceTitle">Space Adventure</h1>
                     </div>
-            
-                        <div id="userHome">
-                            <h3>Playername </h3>
-                            <input type="text" placeholder="Choose playername" id="inpUser" name="user">
-                        </div>
-                        <div id="chooseAvatarHome">
-                            <h3>Choose Avatar</h3>
-                            <img src="/media/imgs/boat.png" alt="avatar1" class="avatars">
-                            <img src="/media/imgs/paperPlane.png" alt="avatar3" class="avatars">
-                            <img src="/media/imgs/rocket.png" alt="avatar2" class="avatars">
-                            <img src="/media/imgs/astronaut.png" alt="avatar4" class="avatars">
-                        </div>
-                        <div id="divBtnStart" class="button_slide slide_left">
-    
-                            <a href="/htmls/index.html"><button id="btnStart"
-                                    class="button_slide slide_diagonal" onclick="setUser()">Start!</button></a>
-                        </div>
+                    <div id="userHome">
+                        <h3>Playername </h3>
+                        <input type="text" placeholder="Choose playername" id="inpUser" name="user">
+                    </div>
+                    <div id="chooseAvatarHome">
+                        <h3>Choose Avatar</h3>
+                        <img src="/media/imgs/boat.png" alt="avatar1" class="avatars" id="av1" onclick="choosedAvatar(this.id)">
+                        <img src="/media/imgs/paperPlane.png" alt="avatar3" class="avatars" id="av2" onclick="choosedAvatar(this.id)">
+                        <img src="/media/imgs/rocket.png" alt="avatar2" class="avatars" id="av3" onclick="choosedAvatar(this.id)">
+                        <img src="/media/imgs/astronaut.png" alt="avatar4" class="avatars" id="av4" onclick="choosedAvatar(this.id)">
+                    </div>
+                    <div id="divBtnStart" class="button_slide slide_left">
+
+                        <a href="/htmls/index.html" id="linkStart"><button id="btnStart" class="button_slide slide_diagonal"
+                                onclick="setUser()">Start!</button></a>
+                    </div>
                 </div>
             </div>
         </div>

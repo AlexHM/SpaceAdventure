@@ -22,49 +22,61 @@ function roll() {
     var rotate = values[Math.floor(Math.random() * len)];
     dice.style.transform = rotate + `scale3d(0.7,0.7,0.7)`;
 
-    if (rotate === values[0] || (rotate === values[6] )){
+    if (rotate === values[0] || (rotate === values[6])) {
         valorDado = 1;
-    } else if (rotate === values[1] || (rotate === values[7])){
+    } else if (rotate === values[1] || (rotate === values[7])) {
         valorDado = 2;
-    }else if (rotate === values[2] || (rotate === values[8])){
+    } else if (rotate === values[2] || (rotate === values[8])) {
         valorDado = 3;
-    }else if (rotate === values[3] || (rotate === values[9])){
+    } else if (rotate === values[3] || (rotate === values[9])) {
         valorDado = 4;
-    }else if (rotate === values[4] || (rotate === values[10])){
+    } else if (rotate === values[4] || (rotate === values[10])) {
         valorDado = 5;
-    }else if (rotate === values[5] || (rotate === values[11])){
+    } else if (rotate === values[5] || (rotate === values[11])) {
         valorDado = 6;
     }
     console.log(valorDado)
+    moveUser(valorDado)
 
 }
 
-var user= "Anonymous";
-function setUser() {  
+var user = "Anonymous";
+
+
+
+function setUser() {
+
     let username = document.getElementById("inpUser").value;
-    localStorage.setItem("user",username)
+    let linkStart = document.getElementById("linkStart");
+    localStorage.setItem("user", username)
     user = localStorage.getItem("user")
-    
-
 }
 
 
-/*Script Home*/ 
-var isOn = true;
-    var sonido = new Audio()
-    sonido.src = '/media/audio/sound.mp3';
 
-// function sounds() {
-//    sonido.volume = 0.3;
-//    sonido.play();
-//    console.log("dgfdg");
-// }
+function choosedAvatar(id) {
+    let avatar = document.getElementById(id).getAttribute("src")
+    localStorage.setItem("avatarImg", avatar)
+
+}
+
+/*Script Home*/
+var isOn = true;
+var sonido = new Audio()
+sonido.src = '/media/audio/sound.mp3';
+
+function sounds() {
+    // sonido.volume = 0.3;
+    // sonido.play();
+    // console.log("dgfdg");
+
+}
 
 function changeButton() {
-    
+
     var img = document.getElementById("sound");
 
-    
+
     if (isOn) {
         console.log("Hola desde mute")
         img.setAttribute("src", "/media/imgs/sound.png");
@@ -79,10 +91,52 @@ function changeButton() {
 }
 
 
-function printUsername(){
+function printUsername() {
 
+
+
+    //Set username
     let userP = document.getElementById("nameChoosed");
     let text = document.createTextNode(localStorage.getItem("user"));
     userP.appendChild(text);
-    console.log(localStorage.getItem("user"))
+
+
+    //Set img
+    let userPhoto = document.getElementById("imgUserResult");
+    let photo = userPhoto.setAttribute("src", localStorage.getItem("avatarImg"));
+
+
+}
+
+function startGame() {
+    sounds();
+
+}
+let imgStart = document.createElement("img");
+function inGame() {
+    let start = document.getElementById("0");
+
+    imgStart.setAttribute("src", localStorage.getItem("avatarImg"));
+    imgStart.setAttribute("id", "imgUserResult2");
+
+    start.appendChild(imgStart);
+
+    printUsername();
+
+}
+
+let actualdiv = "0";
+let cambioDinamico = "0";
+function moveUser(diceValue) {
+
+    let numero = parseInt(actualdiv);
+    numero += diceValue;
+    actualdiv = String(numero);
+    let posicionNueva = document.getElementById(actualdiv);
+    posicionNueva.appendChild(imgStart);
+    
+
+
+
+
 }
