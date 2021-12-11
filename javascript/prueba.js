@@ -1,4 +1,4 @@
-function compruebaResultado(){
+function checkResult(){
     var isChecked1 = document.getElementById('r').checked;
     var isChecked2 = document.getElementById('i').checked;
 

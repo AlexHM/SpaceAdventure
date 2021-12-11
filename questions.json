@@ -1,0 +1,190 @@
+{
+    "questions":[{
+            "q1":"What’s the name of our planet?",
+            "a1":"Mars",
+            "a2":"Plutton",
+            "a3x":"Earth"
+        },
+        {
+            "q2":"Which is the biggest planet in Solar System?",
+            "a1x":"Jupiter",
+            "a2":"Saturn",
+            "a3":"Mercury"
+        }, 
+        {
+            "q3":"What’s the name of the biggest Star we have?",
+            "a1":"Moon",
+            "a2x":"Earth",
+            "a3":"Sun"
+        },
+        {
+            "q4":"Which one is the red planet?",
+            "a1x":"Mars",
+            "a2":"Uranus",
+            "a3":"Venus"
+        },
+        {
+            "q5":"What’s the name of the satellite we can only see at night?",
+            "a1":"Andromeda",
+            "a2x":"Moon",
+            "a3":"Sun"
+        },
+        {
+            "q6":"How many planets are there in the Solar System?",
+            "a1":"10",
+            "a2":"9",
+            "a3x":"8"
+        },
+        {
+            "q7":"Is Plutton a planet?",
+            "a1":"I don't known",
+            "a2x":"No",
+            "a3":"Yes"
+        },
+        {
+            "q8":"Which is the smallest planet in the Solar System?",
+            "a1":"Venus",
+            "a2":"Uranus",
+            "a3x":"Mercury"
+        },
+        {
+            "q9":"How many moons does Jupiter have?",
+            "a1":"1",
+            "a2":"2",
+            "a3x":"8"
+        },
+        {
+            "q10":"How many times does the Sun turn around the Earth in 1 year?",
+            "a1x":"none",
+            "a2":"365",
+            "a3":"1"
+        },{
+            "q11":"Is the Earth round or flat?",
+            "a1":"Flat",
+            "a2x":"Round",
+            "a3":"Ask Darth Vader"
+        },
+        {
+            "q12":"What’s the nickname of the Earth?",
+            "a1":"The blue lagoon",
+            "a2":"THe Rock",
+            "a3x":"The Blue Planet"
+        },
+        {
+            "q13":"How many times does the Earth turn around the Sun each year?",
+            "a1x":"none",
+            "a2":"365",
+            "a3":"1"
+        },
+        {
+            "q14":"Does the moon turn around the Sun?",
+            "a1":"Yes",
+            "a2x":"No",
+            "a3":"Maybe"
+        },
+        {
+            "q15":"Does the moon turn around the Earth?",
+            "a1":"No",
+            "a2":"Maybe",
+            "a3x":"Yes"
+        },
+        {
+            "q16":"Which colour is the Sun?",
+            "a1x":"White",
+            "a2":"Red",
+            "a3":"Yellow"
+        },
+        {
+            "q17":"Is the Sun hot or cold instead?",
+            "a1":"Alohomora",
+            "a2x":"Hot",
+            "a3":"Cold"
+        },
+        {
+            "q18":"Is there any oxygen on the Moon?",
+            "a1x":"None",
+            "a2":"Some",
+            "a3":"Plenty"
+        },
+        {
+            "q19":"Is there any gravity on the Moon?",
+            "a1":"Some",
+            "a2x":"0",
+            "a3":"to much we can't stand it"
+        },
+        {
+            "q20":"Does the Moon shine by itself?",
+            "a1":"Of course it does",
+            "a2":"Yes",
+            "a3x":"No"
+        },
+        {
+            "q21":"Which was the name of the mission that landed on the Moon?",
+            "a1":"Apollo12",
+            "a2":"Apollo Creed",
+            "a3x":"Apollo 11"
+        },
+        {
+            "q22":"If we begin counting from the Sun, which is the Earths position?",
+            "a1":"1",
+            "a2x":"3",
+            "a3":"8"
+        },
+        {
+            "q23":"Are there any planets formed by gas?",
+            "a1":"No",
+            "a2":"All of them are",
+            "a3x":"Yes"
+        },
+        {
+            "q24":"Why do we live on the Earth instead of Mars, for example?",
+            "a1":"Wingarium Leviosa",
+            "a2x":"Because of the atmosphere",
+            "a3":"Because the Earth rocks"
+        },
+        {
+            "q25":"What would happen if the Moon came closer?",
+            "a1":"Merge with the Earth",
+            "a2":"Dinosaurs return",
+            "a3x":"Gravity would change"
+        },
+        {
+            "q26":"Is there any chance we can live in another planet?",
+            "a1x":"Yes",
+            "a2":"No",
+            "a3":"We will create a new planet"
+        },
+        {
+            "q27":"When are we closer to the sun, during Summer or Winter?",
+            "a1x":"Winter",
+            "a2":"Summer",
+            "a3":"We do not move"
+        },
+        {
+            "q28":"How long does it take to the Earth to turn around the Sun?",
+            "a1":"365 hours",
+            "a2":"365 years",
+            "a3x":"365 days"
+        },
+        {
+            "q29":"Does the Earth turn around the Moon?",
+            "a1":"Every day",
+            "a2x":"Never",
+            "a3":"Every 100 years"
+        },
+        {
+            "q30":"Do the planets remain in the same spot in space or do they move instead?",
+            "a1x":"They move",
+            "a2":"They do because Harry Potter threw a Petrifficus Totallus spell on them",
+            "a3":"They do remain put"
+        },
+        {
+            "q31":"Why do rockets set on fire when they come back to Earth?",
+            "a1":"Because they're excited to come back",
+            "a2":"Because Lord Voldemort threw them an Incendio spell",
+            "a3x":"Because of the atmosphere"
+        }
+
+
+    ]
+}
