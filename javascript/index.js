@@ -37,7 +37,6 @@ function roll() {
     }
     console.log(valorDado)
     moveUser(valorDado)
-
 }
 
 var user = "Anonymous";
@@ -135,8 +134,50 @@ function moveUser(diceValue) {
     let posicionNueva = document.getElementById(actualdiv);
     posicionNueva.appendChild(imgStart);
     
+    showModal(posicionNueva);
+
+}
+
+function showModal(posicionNueva) {
+    var myModal = new bootstrap.Modal(document.getElementById('QUESTIONMODAL'), {
+        keyboard: false,
+        backdrop: false,
+        focus: false
+    })
+    
+    var myModalTittle = document.getElementById('modal-tittle')
+    myModalTittle.innerHTML = "Question 1"
+    
+
+    var myModalBody = document.getElementById('modal-body');
+    myModalBody.innerHTML = '<div class="container-fluid">    <div class="row">        <p class="display-6">ESTO ES LA PREGUNTA QUE SALDRA</p>    </div>    <div class="row">        <div class="form-check">            <input class="form-check-input" type="checkbox" value="" id="r">            <label class="form-check-label" for="flexCheckDefault">            RESPUESTA 1           </label>       </div>       <div class="form-check">            <input class="form-check-input" type="checkbox" value="" id="i">            <label class="form-check-label" for="flexCheckDefault">            RESPUESTA 2           </label></div>        <div class="form-check"><input class="form-check-input" type="checkbox" value="" id="i">            <label class="form-check-label" for="flexCheckDefault">            RESPUESTA 3            </label>        </div>    </div></div>'
+
+    myModal.show();
+   
+
+}
 
 
+function setTittle(){
+
+}
 
 
+function setBody(){
+
+}
+
+
+function compruebaResultado(){
+    var isChecked1 = document.getElementById('r').checked;
+    var isChecked2 = document.getElementById('i').checked;
+    if(isChecked1 && !isChecked2){
+        alert('correcto');
+        
+        // FUNCION QUE HAGA SUMAR UN DIGITO A LA RESPUESTA CORRECTA
+    } else{
+        alert('incorrecto');
+
+        // FUNCION QUE HAGA RESTAR UN CORAZON DE LA VIDA
+    }
 }
