@@ -321,7 +321,7 @@ function checkResult() {
     var isChecked3 = document.getElementById('i2').checked;
     //var countCorrecto;
     if (isChecked1 && !isChecked2) {
-        alert("Thar's right!");
+        alert("That's right!");
         // FUNCION QUE HAGA SUMAR UN DIGITO A LA RESPUESTA CORRECTA
         rights ++
         var countRAnswers = document.getElementById("ra");
@@ -353,8 +353,8 @@ const json = {
     {
         "q": "What’s the name of the biggest Star we have?",
         "i1": "Moon",
-        "r": "Earth",
-        "i2": "Sun"
+        "i2": "Earth",
+        "r": "Sun"
     },
     {
         "q": "Which one is the red planet?",
