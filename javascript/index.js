@@ -23,9 +23,6 @@ function removeLife() {
     heart.style.display = "none"
     countHeart--;
 
-
-
-
 }
 
 
@@ -66,7 +63,8 @@ function roll() {
     } else if (rotate === values[5] || (rotate === values[11])) {
         valorDado = 6;
     }
-    moveUser(valorDado)
+    showModal();
+
 }
 
 
@@ -146,32 +144,35 @@ function inGame() {
     printLife(3);
 }
 
-let actualdiv = "0";
+let actualdiv = "32";
 let cambioDinamico = "0";
 
 function moveUser(diceValue) {
 
+    
     let numero = parseInt(actualdiv);
     numero += diceValue;
-    actualdiv = String(numero);
-    let posicionNueva = document.getElementById(actualdiv);
-    posicionNueva.appendChild(imgStart);
-
-    showModal(posicionNueva);
+    if(numero > 36){
+        let posicionNueva = document.getElementById('37');
+        posicionNueva.appendChild(imgStart);
+        alert("CONGRATULATIONS YOU WON!!!!")
+        redirection();
+    } else {
+        actualdiv = String(numero);
+        let posicionNueva = document.getElementById(actualdiv);
+        posicionNueva.appendChild(imgStart);
+    }
+    
 
 }
 
 let tittle = 1;
-
-
-
 var questionsArray = [];
 
 for (let i = 0; i <= 30; i++) {
 
     questionsArray[i] = i
 }
-
 
 var dict = {
     1: '1',
@@ -209,7 +210,7 @@ var dict = {
 
 
 
-function showModal(newPosition) {
+function showModal() {
 
 
 
@@ -290,19 +291,6 @@ function showModal(newPosition) {
 }
 
 
-
-
-
-
-
-function setTittle() {
-
-}
-
-
-function setBody() {
-
-}
 function redirection() {
     window.location = "/htmls/home.html"
 }
@@ -315,6 +303,7 @@ function checkResult() {
     var isChecked3 = document.getElementById('i2').checked;
 
     if (isChecked1 && !isChecked2) {
+        moveUser(valorDado);
         alert("Thar's right!");
         // FUNCION QUE HAGA SUMAR UN DIGITO A LA RESPUESTA CORRECTA
         rights++
@@ -354,8 +343,8 @@ const json = {
     {
         "q": "What’s the name of the biggest Star we have?",
         "i1": "Moon",
-        "r": "Earth",
-        "i2": "Sun"
+        "i2": "Earth",
+        "r": "Sun"
     },
     {
         "q": "Which one is the red planet?",
