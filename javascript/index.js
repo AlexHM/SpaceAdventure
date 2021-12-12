@@ -1,4 +1,5 @@
-
+var rights = 0;
+var wrong = 0;
 var valorDado;
 miStorage = localStorage;
 
@@ -8,19 +9,23 @@ function printLife(count) {
         let lifeContainer = document.getElementById("lifeShip")
         let life = document.createElement("img")
         life.setAttribute("src", "/media/imgs/heartFill.png")
-        life.setAttribute("id", "heart"+r)
+        life.setAttribute("id", "heart" + r)
         life.setAttribute("alt", "life")
         life.style.width = "40px"
         lifeContainer.appendChild(life)
     }
 }
 countHeart = 2;
+
 function removeLife() {
-    
-    heart = document.getElementById("heart"+countHeart)
-    console.log(heart)
+
+    heart = document.getElementById("heart" + countHeart)
     heart.style.display = "none"
-    countHeart--
+    countHeart--;
+
+
+
+
 }
 
 
@@ -61,7 +66,6 @@ function roll() {
     } else if (rotate === values[5] || (rotate === values[11])) {
         valorDado = 6;
     }
-    console.log(valorDado)
     moveUser(valorDado)
 }
 
@@ -210,7 +214,7 @@ function showModal(newPosition) {
 
 
     questionToShow = Math.floor(Math.random() * (30 - 0)) + 0;
-
+    console.log(questionToShow)
     let answerDict = {
         0: `<div class="form-check"> 
                 <input class="form-check-input" type="checkbox" value="" id="r">  
@@ -299,22 +303,38 @@ function setTittle() {
 function setBody() {
 
 }
+function redirection() {
+    window.location = "/htmls/home.html"
+}
 
 let lifeCount = 3;
+let heartLifes = 2;
 function checkResult() {
     var isChecked1 = document.getElementById('r').checked;
     var isChecked2 = document.getElementById('i1').checked;
     var isChecked3 = document.getElementById('i2').checked;
-    
-    if (isChecked1 && !isChecked2) {
-        alert('correcto');
 
+    if (isChecked1 && !isChecked2) {
+        alert("Thar's right!");
         // FUNCION QUE HAGA SUMAR UN DIGITO A LA RESPUESTA CORRECTA
+        rights++
+        var countRAnswers = document.getElementById("ra");
+
+        countRAnswers.innerHTML = rights
     } else {
-        alert('incorrecto');
-        lifeCount = lifeCount -1
-        removeLife()
-        
+        if (heartLifes == 0) {
+            alert("GAME OVER")
+            setTimeout(redirection(), 5000);
+        } else {
+            removeLife();
+            alert("Maybe next time");
+            wrong++;
+            var countWAnswers = document.getElementById("wa");
+            countWAnswers.innerHTML = wrong;
+            heartLifes--;
+        }
+
+
     }
 }
 
@@ -375,7 +395,7 @@ const json = {
     },
     {
         "q": "How many times does the Sun turn around the Earth in 1 year?",
-        "r": "none",
+        "r": "None of them",
         "i2": "365",
         "i1": "1"
     }, {
@@ -392,7 +412,7 @@ const json = {
     },
     {
         "q": "How many times does the Earth turn around the Sun each year?",
-        "r": "none",
+        "r": "Any of them",
         "i1": "365",
         "i2": "1"
     },
@@ -422,7 +442,7 @@ const json = {
     },
     {
         "q": "Is there any oxygen on the Moon?",
-        "r": "None",
+        "r": "None of them",
         "i1": "Some",
         "i2": "Plenty"
     },
