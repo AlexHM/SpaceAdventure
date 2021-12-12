@@ -225,10 +225,47 @@ function showModal(newPosition) {
     myModalTittle.innerHTML = 'Question ' + tittle
     tittle++
 
-   questionsRandomNumber = [0,1,2]
 
-   
+    questionsRandomNumber = [0,1,2]
 
+
+
+    var myModalBody = document.getElementById('modal-body');
+    myModalBody.innerHTML = `<div class="container-fluid">    
+                                <div class="row">        
+                                    <p class="display-6">${json.questions[dict[questionToShow]].q}</p>
+                                </div>   
+                                    <div class="row"> 
+
+                                    <div style="display:none;"> 
+                                    ${answersShow1 = Math.floor(Math.random() * (2 - 0)) + 0}
+                                    </div>
+
+                                    ${answerDict[questionsRandomNumber[answersShow1]]}
+
+                                    <div style="display:none;"> 
+                                    ${questionsRandomNumber.splice(answersShow1,1)}
+                                    </div>
+                                    
+                                    <div style="display:none;"> 
+                                    ${answersShow1 = Math.floor(Math.random() * (questionsRandomNumber.length - 0)) + 0}
+                                    </div>
+
+                                    ${answerDict[questionsRandomNumber[answersShow1]]}
+
+
+                                    <div style="display:none;"> 
+                                    ${questionsRandomNumber.splice(answersShow1,1)}
+                                    </div>
+
+                                    ${answerDict[questionsRandomNumber[0]]}
+                                        
+                                       
+                                    
+                                  </div>
+                                </div>`
+    delete dict[questionToShow]
+    myModal.show();
 
     var myModalBody = document.getElementById('modal-body');
     myModalBody.innerHTML = `<div class="container-fluid">    
@@ -274,6 +311,7 @@ function setTittle() {
 function setBody() {
 
 }
+
 
 
 var rights = 0;
