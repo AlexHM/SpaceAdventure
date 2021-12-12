@@ -1,6 +1,27 @@
 var valorDado;
 miStorage = localStorage;
 
+// Print lives
+function printLife(count) {
+    for (let r = 0; r < count; r++) {
+        let lifeContainer = document.getElementById("lifeShip")
+        let life = document.createElement("img")
+        life.setAttribute("src", "/media/imgs/heartFill.png")
+        life.setAttribute("id", "heart"+r)
+        life.setAttribute("alt", "life")
+        life.style.width = "40px"
+        lifeContainer.appendChild(life)
+    }
+}
+countHeart = 2;
+function removeLife() {
+    
+    heart = document.getElementById("heart"+countHeart)
+    console.log(heart)
+    heart.style.display = "none"
+    countHeart--
+}
+
 
 
 function roll() {
@@ -123,7 +144,7 @@ function inGame() {
     start.appendChild(imgStart);
 
     printUsername();
-
+    printLife(3);
 }
 
 let actualdiv = "0";
@@ -189,8 +210,8 @@ var dict = {
 
 
 function showModal(newPosition) {
-     
-    
+
+
 
     questionToShow = Math.floor(Math.random() * (30 - 0)) + 0;
 
@@ -225,7 +246,7 @@ function showModal(newPosition) {
     myModalTittle.innerHTML = 'Question ' + tittle
     tittle++
 
-    questionsRandomNumber = [0,1,2]
+    questionsRandomNumber = [0, 1, 2]
 
 
 
@@ -243,7 +264,7 @@ function showModal(newPosition) {
                                     ${answerDict[questionsRandomNumber[answersShow1]]}
 
                                     <div style="display:none;"> 
-                                    ${questionsRandomNumber.splice(answersShow1,1)}
+                                    ${questionsRandomNumber.splice(answersShow1, 1)}
                                     </div>
                                     
                                     <div style="display:none;"> 
@@ -253,7 +274,7 @@ function showModal(newPosition) {
                                     ${answerDict[questionsRandomNumber[answersShow1]]}
 
                                     <div style="display:none;"> 
-                                    ${questionsRandomNumber.splice(answersShow1,1)}
+                                    ${questionsRandomNumber.splice(answersShow1, 1)}
                                     </div>
 
                                     ${answerDict[questionsRandomNumber[0]]}
@@ -283,19 +304,21 @@ function setBody() {
 
 }
 
-
+let lifeCount = 3;
 function checkResult() {
     var isChecked1 = document.getElementById('r').checked;
     var isChecked2 = document.getElementById('i1').checked;
     var isChecked3 = document.getElementById('i2').checked;
+    
     if (isChecked1 && !isChecked2) {
         alert('correcto');
 
         // FUNCION QUE HAGA SUMAR UN DIGITO A LA RESPUESTA CORRECTA
     } else {
         alert('incorrecto');
-
-        // FUNCION QUE HAGA RESTAR UN CORAZON DE LA VIDA
+        lifeCount = lifeCount -1
+        removeLife()
+        
     }
 }
 
