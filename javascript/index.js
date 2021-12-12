@@ -144,7 +144,7 @@ function inGame() {
     printLife(3);
 }
 
-let actualdiv = "32";
+let actualdiv = "0";
 let cambioDinamico = "0";
 
 function moveUser(diceValue) {
