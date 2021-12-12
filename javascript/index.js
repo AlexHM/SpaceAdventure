@@ -1,3 +1,4 @@
+
 var valorDado;
 miStorage = localStorage;
 
@@ -25,6 +26,7 @@ function removeLife() {
 
 
 function roll() {
+
     var body = document.querySelector("body");
     var dice = document.querySelector(".box");
     var values = [
@@ -41,6 +43,7 @@ function roll() {
         `rotateX(540deg) rotateY(630deg) translate3d(0px,0px,0px)`, //5
         `rotateX(-540deg) rotateY(720deg) translate3d(0px,0px,0px)` //6
     ];
+
     var len = values.length;
     var rotate = values[Math.floor(Math.random() * len)];
     dice.style.transform = rotate + `scale3d(0.7,0.7,0.7)`;
@@ -62,9 +65,8 @@ function roll() {
     moveUser(valorDado)
 }
 
+
 var user = "Anonymous";
-
-
 
 function setUser() {
 
@@ -77,9 +79,9 @@ function setUser() {
 
 
 function choosedAvatar(id) {
+
     let avatar = document.getElementById(id).getAttribute("src")
     localStorage.setItem("avatarImg", avatar)
-
 }
 
 /*Script Home*/
@@ -98,7 +100,6 @@ function changeButton() {
 
     var img = document.getElementById("sound");
 
-
     if (isOn) {
         console.log("Hola desde mute")
         img.setAttribute("src", "/media/imgs/sound.png");
@@ -115,40 +116,35 @@ function changeButton() {
 
 function printUsername() {
 
-
-
     //Set username
     let userP = document.getElementById("nameChoosed");
     let text = document.createTextNode(localStorage.getItem("user"));
     userP.appendChild(text);
 
-
     //Set img
     let userPhoto = document.getElementById("imgUserResult");
     let photo = userPhoto.setAttribute("src", localStorage.getItem("avatarImg"));
-
-
 }
 
 function startGame() {
     sounds();
-
 }
-let imgStart = document.createElement("img");
-function inGame() {
-    let start = document.getElementById("0");
 
+let imgStart = document.createElement("img");
+
+function inGame() {
+
+    let start = document.getElementById("0");
     imgStart.setAttribute("src", localStorage.getItem("avatarImg"));
     imgStart.setAttribute("id", "imgUserResult2");
-
     start.appendChild(imgStart);
-
     printUsername();
     printLife(3);
 }
 
 let actualdiv = "0";
 let cambioDinamico = "0";
+
 function moveUser(diceValue) {
 
     let numero = parseInt(actualdiv);
