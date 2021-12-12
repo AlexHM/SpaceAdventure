@@ -187,32 +187,28 @@ var dict = {
 };
 
 
+
 function showModal(newPosition) {
      
-    var answerIdDict = {
-        1: 'r',
-        2: 'i1',
-        3: 'i2',
-    }
+    
 
     questionToShow = Math.floor(Math.random() * (30 - 0)) + 0;
-    answersShow = Math.floor(Math.random() * (3 - 1)) + 1;
 
     let answerDict = {
-        1: `<div class="form-check"> 
+        0: `<div class="form-check"> 
                 <input class="form-check-input" type="checkbox" value="" id="r">  
                     <label class="form-check-label" for="flexCheckDefault"> 
                     ${json.questions[dict[questionToShow]].r} 
                 </label> 
         </div>`,
-        2: `<div class="form-check"> 
+        1: `<div class="form-check"> 
                 <input class="form-check-input" type="checkbox" value="" id="i1">  
                     <label class="form-check-label" for="flexCheckDefault"> 
                     ${json.questions[dict[questionToShow]].i1} 
         
                 </label> 
             </div>`,
-        3: `<div class="form-check"> 
+        2: `<div class="form-check"> 
                 <input class="form-check-input" type="checkbox" value="" id="i2">  
                     <label class="form-check-label" for="flexCheckDefault"> 
                         ${json.questions[dict[questionToShow]].i2} 
@@ -229,22 +225,32 @@ function showModal(newPosition) {
     myModalTittle.innerHTML = 'Question ' + tittle
     tittle++
 
+   questionsRandomNumber = [0,1,2]
+
+   
+
+
     var myModalBody = document.getElementById('modal-body');
     myModalBody.innerHTML = `<div class="container-fluid">    
                                 <div class="row">        
                                     <p class="display-6">${json.questions[dict[questionToShow]].q}</p>
                                 </div>   
                                     <div class="row"> 
-                                 
-                                        ${answerDict[1]}
+                                    ${console.log(questionsRandomNumber)}    
 
+                                        ${answersShow1 = Math.floor(Math.random() * (2 - 0)) + 0}
+                                        ${console.log(answersShow1)}    
 
-                                    ${answerDict[2]}
+                                        ${answerDict[questionsRandomNumber[answersShow1]]}
+                                        ${questionsRandomNumber.splice(answersShow1,1)}
+                                        ${console.log(questionsRandomNumber)}    
+                                        ${answersShow1 = Math.floor(Math.random() * (questionsRandomNumber.length - 0)) + 0}
+                                        ${console.log(answersShow1)}    
+                                        ${answerDict[questionsRandomNumber[answersShow1]]}
+                                        ${questionsRandomNumber.splice(answersShow1,1)}
+                                        ${console.log(questionsRandomNumber)}    
 
-                       
-
-                                        ${answerDict[3]}
-
+                                        ${answerDict[questionsRandomNumber[0]]}
                                     
                                   </div>
                                 </div>`
