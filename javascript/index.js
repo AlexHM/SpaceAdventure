@@ -225,9 +225,8 @@ function showModal(newPosition) {
     myModalTittle.innerHTML = 'Question ' + tittle
     tittle++
 
-   questionsRandomNumber = [0,1,2]
+    questionsRandomNumber = [0,1,2]
 
-   
 
 
     var myModalBody = document.getElementById('modal-body');
@@ -236,21 +235,30 @@ function showModal(newPosition) {
                                     <p class="display-6">${json.questions[dict[questionToShow]].q}</p>
                                 </div>   
                                     <div class="row"> 
-                                    ${console.log(questionsRandomNumber)}    
 
-                                        ${answersShow1 = Math.floor(Math.random() * (2 - 0)) + 0}
-                                        ${console.log(answersShow1)}    
+                                    <div style="display:none;"> 
+                                    ${answersShow1 = Math.floor(Math.random() * (2 - 0)) + 0}
+                                    </div>
 
-                                        ${answerDict[questionsRandomNumber[answersShow1]]}
-                                        ${questionsRandomNumber.splice(answersShow1,1)}
-                                        ${console.log(questionsRandomNumber)}    
-                                        ${answersShow1 = Math.floor(Math.random() * (questionsRandomNumber.length - 0)) + 0}
-                                        ${console.log(answersShow1)}    
-                                        ${answerDict[questionsRandomNumber[answersShow1]]}
-                                        ${questionsRandomNumber.splice(answersShow1,1)}
-                                        ${console.log(questionsRandomNumber)}    
+                                    ${answerDict[questionsRandomNumber[answersShow1]]}
 
-                                        ${answerDict[questionsRandomNumber[0]]}
+                                    <div style="display:none;"> 
+                                    ${questionsRandomNumber.splice(answersShow1,1)}
+                                    </div>
+                                    
+                                    <div style="display:none;"> 
+                                    ${answersShow1 = Math.floor(Math.random() * (questionsRandomNumber.length - 0)) + 0}
+                                    </div>
+
+                                    ${answerDict[questionsRandomNumber[answersShow1]]}
+
+                                    <div style="display:none;"> 
+                                    ${questionsRandomNumber.splice(answersShow1,1)}
+                                    </div>
+
+                                    ${answerDict[questionsRandomNumber[0]]}
+                                        
+                                       
                                     
                                   </div>
                                 </div>`
