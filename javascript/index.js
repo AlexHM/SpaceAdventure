@@ -276,18 +276,26 @@ function setBody() {
 }
 
 
+var rights = 0;
 function checkResult() {
     var isChecked1 = document.getElementById('r').checked;
     var isChecked2 = document.getElementById('i1').checked;
     var isChecked3 = document.getElementById('i2').checked;
+    //var countCorrecto;
     if (isChecked1 && !isChecked2) {
-        alert('correcto');
-
+        alert("Thar's right!");
         // FUNCION QUE HAGA SUMAR UN DIGITO A LA RESPUESTA CORRECTA
+        rights ++
+        var countRAnswers = document.getElementById("ra");
+
+        console.log(rights)
+        countRAnswers.innerHTML = rights;
+
     } else {
-        alert('incorrecto');
+        alert("Maybe next time");
 
         // FUNCION QUE HAGA RESTAR UN CORAZON DE LA VIDA
+
     }
 }
 
@@ -365,9 +373,9 @@ const json = {
     },
     {
         "q": "How many times does the Earth turn around the Sun each year?",
-        "r": "none",
+        "i2": "none",
         "i1": "365",
-        "i2": "1"
+        "r": "1"
     },
     {
         "q": "Does the moon turn around the Sun?",
