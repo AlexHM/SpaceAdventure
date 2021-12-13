@@ -396,14 +396,14 @@ const json = {
     {
         "q": "What’s the nickname of the Earth?",
         "i1": "The blue lagoon",
-        "i2": "THe Rock",
+        "i2": "The Rock",
         "r": "The Blue Planet"
     },
     {
         "q": "How many times does the Earth turn around the Sun each year?",
-        "r": "Any of them",
+        "i1": "Any of them",
         "i1": "365",
-        "i2": "1"
+        "r": "1"
     },
     {
         "q": "Does the moon turn around the Sun?",
@@ -437,8 +437,8 @@ const json = {
     },
     {
         "q": "Is there any gravity on the Moon?",
-        "i1": "Some",
-        "r": "0",
+        "r": "Some",
+        "i1": "0",
         "i2": "to much we can't stand it"
     },
     {
@@ -485,8 +485,8 @@ const json = {
     },
     {
         "q": "When are we closer to the sun, during Summer or Winter?",
-        "r": "Winter",
-        "i1": "Summer",
+        "i1": "Winter",
+        "r": "Summer",
         "i2": "We do not move"
     },
     {
