@@ -28,7 +28,6 @@ function removeLife() {
 
 
 function roll() {
-
     var body = document.querySelector("body");
     var dice = document.querySelector(".box");
     var values = [
@@ -45,7 +44,6 @@ function roll() {
         `rotateX(540deg) rotateY(630deg) translate3d(0px,0px,0px)`, //5
         `rotateX(-540deg) rotateY(720deg) translate3d(0px,0px,0px)` //6
     ];
-
     var len = values.length;
     var rotate = values[Math.floor(Math.random() * len)];
     dice.style.transform = rotate + `scale3d(0.7,0.7,0.7)`;
@@ -67,8 +65,9 @@ function roll() {
 
 }
 
-
 var user = "Anonymous";
+
+
 
 function setUser() {
 
@@ -81,9 +80,9 @@ function setUser() {
 
 
 function choosedAvatar(id) {
-
     let avatar = document.getElementById(id).getAttribute("src")
     localStorage.setItem("avatarImg", avatar)
+
 }
 
 /*Script Home*/
@@ -102,6 +101,7 @@ function changeButton() {
 
     var img = document.getElementById("sound");
 
+
     if (isOn) {
         console.log("Hola desde mute")
         img.setAttribute("src", "/media/imgs/sound.png");
@@ -118,51 +118,50 @@ function changeButton() {
 
 function printUsername() {
 
+
+
     //Set username
     let userP = document.getElementById("nameChoosed");
     let text = document.createTextNode(localStorage.getItem("user"));
     userP.appendChild(text);
 
+
     //Set img
     let userPhoto = document.getElementById("imgUserResult");
     let photo = userPhoto.setAttribute("src", localStorage.getItem("avatarImg"));
+
+
 }
 
 function startGame() {
     sounds();
+
 }
-
 let imgStart = document.createElement("img");
-
 function inGame() {
-
     let start = document.getElementById("0");
+
     imgStart.setAttribute("src", localStorage.getItem("avatarImg"));
     imgStart.setAttribute("id", "imgUserResult2");
+
     start.appendChild(imgStart);
+
     printUsername();
-    printLife(3);
 }
 
 let actualdiv = "0";
 let cambioDinamico = "0";
-
 function moveUser(diceValue) {
 
     
     let numero = parseInt(actualdiv);
     numero += diceValue;
-    if(numero > 36){
-        let posicionNueva = document.getElementById('37');
-        posicionNueva.appendChild(imgStart);
-        alert("CONGRATULATIONS YOU WON!!!!")
-        redirection();
-    } else {
-        actualdiv = String(numero);
-        let posicionNueva = document.getElementById(actualdiv);
-        posicionNueva.appendChild(imgStart);
-    }
-    
+    actualdiv = String(numero);
+    let posicionNueva = document.getElementById(actualdiv);
+    posicionNueva.appendChild(imgStart);
+<<<<<<<<< Temporary merge branch 1
+}
+=========
 
 }
 
@@ -247,7 +246,7 @@ function showModal() {
     myModalTittle.innerHTML = 'Question ' + tittle
     tittle++
 
-    questionsRandomNumber = [0, 1, 2]
+    questionsRandomNumber = [0,1,2]
 
 
 
@@ -274,6 +273,7 @@ function showModal() {
 
                                     ${answerDict[questionsRandomNumber[answersShow1]]}
 
+
                                     <div style="display:none;"> 
                                     ${questionsRandomNumber.splice(answersShow1, 1)}
                                     </div>
@@ -287,7 +287,13 @@ function showModal() {
     delete dict[questionToShow]
     myModal.show();
 
+var questions = new Array(30);
 
+<<<<<<<<< Temporary merge branch 1
+//Bucle para meter en cada posición otros array con 3 posiciones(respuestas)
+for(var i=0; i<10; i++) {
+    nuevoArray[i] = new Array(10);
+=========
 }
 
 
@@ -295,35 +301,24 @@ function redirection() {
     window.location = "/htmls/home.html"
 }
 
-let lifeCount = 3;
-let heartLifes = 2;
+
+function setBody() {
+
+}
+
+
 function checkResult() {
     var isChecked1 = document.getElementById('r').checked;
     var isChecked2 = document.getElementById('i1').checked;
     var isChecked3 = document.getElementById('i2').checked;
-
     if (isChecked1 && !isChecked2) {
-        moveUser(valorDado);
-        alert("That's right!");
+        alert('correcto');
+
         // FUNCION QUE HAGA SUMAR UN DIGITO A LA RESPUESTA CORRECTA
-        rights++
-        var countRAnswers = document.getElementById("ra");
-
-        countRAnswers.innerHTML = rights
     } else {
-        if (heartLifes == 0) {
-            alert("GAME OVER")
-            setTimeout(redirection(), 5000);
-        } else {
-            removeLife();
-            alert("Maybe next time");
-            wrong++;
-            var countWAnswers = document.getElementById("wa");
-            countWAnswers.innerHTML = wrong;
-            heartLifes--;
-        }
+        alert('incorrecto');
 
-
+        // FUNCION QUE HAGA RESTAR UN CORAZON DE LA VIDA
     }
 }
 
@@ -401,9 +396,9 @@ const json = {
     },
     {
         "q": "How many times does the Earth turn around the Sun each year?",
-        "r": "Any of them",
+        "r": "none",
         "i1": "365",
-        "i2": "1"
+        "r": "1"
     },
     {
         "q": "Does the moon turn around the Sun?",
