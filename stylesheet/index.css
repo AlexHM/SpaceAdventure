@@ -67,14 +67,7 @@ align-items: center;
 #startLine2{
     
 }
-#blackHole{
-    position:absolute;
-    width: 100%;
-    height: auto;
-    max-width: 50vh;
-    top: +380px;
-    left: +500px;
-}
+
 .button{
     color:white;
     display: flex;
@@ -100,7 +93,9 @@ align-items: center;
 }
 
 
-
+#hueco{
+    background-color: black;
+}
 
 #divPhoto{
     display: flex;

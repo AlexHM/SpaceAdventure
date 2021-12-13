@@ -304,7 +304,7 @@ function checkResult() {
 
     if (isChecked1 && !isChecked2) {
         moveUser(valorDado);
-        alert("Thar's right!");
+        alert("That's right!");
         // FUNCION QUE HAGA SUMAR UN DIGITO A LA RESPUESTA CORRECTA
         rights++
         var countRAnswers = document.getElementById("ra");
