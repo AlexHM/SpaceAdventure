@@ -22,7 +22,6 @@ function removeLife() {
     heart = document.getElementById("heart" + countHeart)
     heart.style.display = "none"
     countHeart--;
-
 }
 
 
